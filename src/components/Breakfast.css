@@ -1,0 +1,190 @@
+.breakfast-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.breakfast-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.breakfast-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.breakfast-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.breakfast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.breakfast-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+.breakfast-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.breakfast-image {
+  width: auto;
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+}
+
+.item-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.breakfast-image img {
+  width: auto;
+  height: 205px;
+  object-fit: fill;
+  border-radius: 15px;
+}
+
+.breakfast-content {
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.breakfast-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.breakfast-content p {
+  flex-grow: 1;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.breakfast-footer {
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.order-button {
+  background: #ffd700;
+  color: #333;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.order-button:hover {
+  background: #e6c200;
+  transform: scale(1.05);
+}
+
+.quantity-input {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-input label {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+.quantity-input input {
+  width: 50px;
+  padding: 0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.quantity-input input:focus {
+  outline: none;
+  border-color: #ffd700;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.breakfast-footer p {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .breakfast-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .breakfast-image img {
+    height: auto;
+  }
+
+  .item-icon {
+    font-size: 2.5rem;
+  }
+}
